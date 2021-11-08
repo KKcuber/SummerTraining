@@ -8,7 +8,6 @@ typedef long long ll;
 
 /* So the logic that we are goin to use here is to maintain a deque consisting of 
 only the indices of possible maximum elements in the subarray in sorted order. */
-// The solution is O(nt) time and O(kt) space.
 int main()
 {
     ios_base::sync_with_stdio(false);
