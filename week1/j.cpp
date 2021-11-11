@@ -6,8 +6,10 @@ typedef long long ll;
     cin >> t; \
     while (t--)
 
-/* We use a greedy strategy here. We always pick the highest number in the set at that moment
- as the one of the numbers constituting the sum required which is the maximum of the elements removed in the previous iteration.*/
+/* We use a greedy strategy here.
+ We always pick the highest number in the set at that moment
+ as the one of the numbers constituting the sum required
+ which is the maximum of the elements removed in the previous iteration.*/
 int main()
 {
     ios_base::sync_with_stdio(false);
