@@ -20,13 +20,16 @@ int main()
             s.insert(x);
         }
         int yesflag = 0; int sum;
+        // this queue stores the pairs which are removed in order
         queue<int> q;
         // here i iterates over the possible second value along with the highest element
         for(int i = 0; i < 2*n-1; i++)
         {
+            // making a copy of the set to preserve the original set
             multiset<int> c = s;
             auto it = c.begin();
             for(int j = 0; j<i; j++) it = ++it;
+            // here j iterates over all the removals
             for(int j = 0; j<n; j++)
             {
                 auto endit = --c.end();
@@ -36,9 +39,10 @@ int main()
                 if(j != n-1)
                 {
                     it = c.find(sum - *(--c.end()));
+                    // if a number which fits into the sum along with the highest number does not exist then we break and go on to next pair of starting numbers
                     if(it == c.end() || it == (--c.end()))
                     {
-                        while(q.size()) q.pop();
+                        while(q.size()) q.pop(); // emptying the queue
                         break;
                     }
                 }
